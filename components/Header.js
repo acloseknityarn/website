@@ -1,4 +1,5 @@
 import Link from "./Link";
+import NextLink from 'next/link'
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
         <Link className="text-blue-500" href="/about">About</Link>
         <Link className="text-blue-500">Projects</Link>
         <Link className="text-blue-500">Blog</Link>
-        <Link className="text-blue-500">Contact</Link>
+        <Link className="text-blue-500" href="/contact">Contact</Link>
       </nav>
     </header>
   )
