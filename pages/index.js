@@ -3,6 +3,7 @@ import Image from 'next/image'
 import SocialLinks from '../components/SocialLinks'
 import profilePic from '../public/images/portfolio-pic.jpg'
 
+
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-6 mb-8">
@@ -19,17 +20,13 @@ export default function Home() {
           Aryamann Verma
         </h1>
 
-        <div className="mt-6 flex justify-center">
-          <SocialLinks />
-        </div>
-
         <h2 className="text-2xl text-gray-500 font-semibold">
           <div>
             Computer Programming
           </div>
 
           <div>
-          Undergrad @ Georgian College
+            Undergrad @ Georgian College
           </div>
         </h2>
 
@@ -48,6 +45,11 @@ export default function Home() {
           priority
           placeholder="blur"
         />
+      </div>
+      
+      {/* SocialLinks */} 
+      <div className="mt-6 flex justify-center">
+        <SocialLinks />
       </div>
 
     </div>
