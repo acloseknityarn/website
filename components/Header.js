@@ -3,7 +3,7 @@ import NextLink from 'next/link'
 
 export default function Header() {
   return (
-    <header className="my-0 md:my-8 p-8 flex max-w-4xl mx-auto justify-between md:text-xl">
+    <header className="my-0 md:my-4 p-8 flex max-w-4xl mx-auto justify-between md:text-xl">
       <Link href="/">AV</Link>
       <nav className="flex space-x-3">
         <Link className="text-blue-500" href="/about">About</Link>
