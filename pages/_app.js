@@ -1,5 +1,6 @@
 import 'tailwindcss/tailwind.css'
 import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 // this component is rendered for all routes
 // about.js, index.js, contact.js, …
@@ -11,10 +12,11 @@ import Header from "../components/Header"
  */
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <>
       <Header />
       <Component {...pageProps} />
-    </div>
+      <Footer />
+    </>
   )
 }
 

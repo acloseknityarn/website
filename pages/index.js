@@ -6,7 +6,7 @@ import profilePic from '../public/images/portfolio-pic.jpg'
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto px-6 mb-8">
+    <div className="max-w-4xl mx-auto px-6 mb-4">
       {/* will talk about this later */}
       <Head>
         <title>Create Next App</title>
@@ -14,7 +14,8 @@ export default function Home() {
       </Head>
 
 
-      <section className="text-center mb-8">
+      <div className="md:w-3/5 md:mx-auto">
+      <section className="mb-8">
         {/* fullName */}
         <h1 className="text-4xl mt-2 lg:mt-0 lg:text-5xl font-bold mb-4 text-gray-600">
           Aryamann Verma
@@ -37,7 +38,6 @@ export default function Home() {
 
 
       {/* profilePic */}
-      <div className="md:w-3/5 md:mx-auto">
         <Image
           className="rounded-3xl"
           src={profilePic}
@@ -46,8 +46,9 @@ export default function Home() {
           placeholder="blur"
         />
       </div>
-      
-      {/* SocialLinks */} 
+     
+
+      {/* SocialLinks */}
       <div className="mt-6 flex justify-center">
         <SocialLinks />
       </div>

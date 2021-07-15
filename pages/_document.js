@@ -6,6 +6,7 @@ class MyDocument extends Document {
       <Html className="bg-[#fbf6ef]">
         <Head />
         <body>
+          {/* next.js injects the default export of _app.js here */}
           <Main />
           <NextScript />
         </body>
