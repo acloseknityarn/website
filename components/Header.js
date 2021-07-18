@@ -26,7 +26,6 @@ export default function Header() {
         <Link className="text-gray-500 font-semibold" href="/about">About</Link>
         <Link className="text-gray-500 font-semibold">Projects</Link>
         <Link className="text-gray-500 font-semibold">Blog</Link>
-        <Link className="text-gray-500 font-semibold" href="/contact">Contact</Link>
       </nav>
     </header>
     

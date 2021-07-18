@@ -1,10 +1,32 @@
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import SocialLinks from '../components/SocialLinks'
 import profilePic from '../public/images/portfolio-pic.jpg'
 
+/**
+ * whenever the second variable ( which is a function )
+ * is called, the whole react component ('Home' function)
+ * re renders -> re fires
+ */
 
 export default function Home() {
+  const [dataFromHelloAPI, setDataFromHelloAPI] = useState(null)
+
+  console.log(dataFromHelloAPI);
+  /**
+   * executes whatever you put in it, only once
+   */
+  useEffect(() => {
+    fetch('/api/hello')
+      .then(res => res.json()) // data comes from the server here
+      .then(fetchedData => { // this happens immediately
+        setDataFromHelloAPI(fetchedData)
+      })
+
+    /** we will set/update dataFromHelloAPI by using setDataFromHelloAPI */
+  }, [])
+
   return (
     <div className="max-w-4xl mx-auto px-6 mb-4">
       {/* will talk about this later */}
@@ -12,6 +34,10 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <div>
+      { dataFromHelloAPI?.name?.firstname }
+      </div>
 
 
       <div className="md:w-3/5 md:mx-auto">
