@@ -11,20 +11,21 @@ import profilePic from '../public/images/portfolio-pic.jpg'
  */
 
 export default function Home() {
-  const [dataFromHelloAPI, setDataFromHelloAPI] = useState(null)
+  const [
+    spotifyCurrentlyPlayingData,
+    setSpotifyCurrentlyPlayingData
+  ] = useState(null)
 
-  console.log(dataFromHelloAPI);
   /**
    * executes whatever you put in it, only once
    */
   useEffect(() => {
-    fetch('/api/hello')
-      .then(res => res.json()) // data comes from the server here
+    // Promise syntax
+    fetch('/api/spotify-currently-playing')
+      .then(apiResponse => apiResponse.json()) // data comes from the server here
       .then(fetchedData => { // this happens immediately
-        setDataFromHelloAPI(fetchedData)
+        setSpotifyCurrentlyPlayingData(fetchedData)
       })
-
-    /** we will set/update dataFromHelloAPI by using setDataFromHelloAPI */
   }, [])
 
   return (
@@ -36,7 +37,7 @@ export default function Home() {
       </Head>
 
       <div>
-      { dataFromHelloAPI?.name?.firstname }
+        {spotifyCurrentlyPlayingData?.item?.name}
       </div>
 
 
