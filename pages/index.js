@@ -3,16 +3,20 @@ import Image from 'next/image'
 import SocialLinks from '../components/SocialLinks'
 import profilePic from '../public/images/portfolio-pic.jpg'
 
+/**
+ * whenever the second variable ( which is a function )
+ * is called, the whole react component ('Home' function)
+ * re renders -> re fires
+ */
 
 export default function Home() {
   return (
     <div className="max-w-4xl mx-auto px-6 mb-4">
       {/* will talk about this later */}
       <Head>
-        <title>Create Next App</title>
+        <title>Aryamann Verma</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
 
       <div className="md:w-3/5 md:mx-auto">
       <section className="mb-8">

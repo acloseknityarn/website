@@ -1,4 +1,3 @@
-import AryamannContact from "../components/Contact";
 import SocialLinks from '../components/SocialLinks';
 
 export default function About() {
@@ -10,7 +9,7 @@ export default function About() {
         <p className="mb-5">Hey Visitor! Thanks for stopping by. I'm Aryamann which translates to <strong>'a companion'</strong>. I'm currently gaining experience in the web development world.</p>
 
         <p className="mb-5">I am pursuing Computer Science at Georgian College, Barrie. I am always prepared to meet new people, build connections and learn new things.
-        I strive for making a difference in the world through my work.</p>
+          I strive for making a difference in the world through my work.</p>
 
         <p className="mb-5">I'm passionate about web and game development, animation illustration, and music. I like to push myself to take up new challenges and also solve complex puzzles.</p>
 

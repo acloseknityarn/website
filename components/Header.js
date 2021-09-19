@@ -1,7 +1,7 @@
 import Link from "./Link";
 import NextLink from 'next/link'
 import Image from 'next/image'
-import profilePicLogo from '../public/images/profile-pic-logo.jpg'
+import profilePicLogo from '../public/images/profile-pic-logo-3.jpg'
 
 export default function Header() {
   return (
@@ -23,10 +23,11 @@ export default function Header() {
             opposite of the above
       */}
       <nav className="flex space-x-3 items-center">
+        {/* <Link className="text-gray-500 font-semibold" href="/">Home</Link> */}
         <Link className="text-gray-500 font-semibold" href="/about">About</Link>
-        <Link className="text-gray-500 font-semibold">Projects</Link>
-        <Link className="text-gray-500 font-semibold">Blog</Link>
-        <Link className="text-gray-500 font-semibold" href="/contact">Contact</Link>
+        <Link className="text-gray-500 font-semibold" href="/projects">Projects</Link>
+        <Link className="text-gray-500 font-semibold" href="/blog">Blog</Link>
+        <Link className="text-gray-500 font-semibold" href="/spotify">Spotify</Link>
       </nav>
     </header>
     
