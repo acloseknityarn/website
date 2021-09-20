@@ -60,15 +60,15 @@ export default function Spotify(){
           {/* Change native img tag to Image component imported from next.js */}
           <img className = "" src={image} height="500" width="500" />
         </div>
-        <div className="text-gray-700">{artistName}</div>
+        <div>{artistName}</div>
         
         {/* mobile */}
         <Link href={songLink} className="text-2xl lg:hidden" openInNewTab>
-          <div className="text-gray-700 font-bold underline">{songName}</div>
+          <div className="font-bold underline">{songName}</div>
         </Link>
 
         {/* desktop */}
-        <div className="text-gray-700 font-bold text-2xl hidden lg:block">{songName}</div>
+        <div className="font-bold text-2xl hidden lg:block">{songName}</div>
       </div>
     </Link>
   )
@@ -87,10 +87,12 @@ export default function Spotify(){
     <div>
       <div className="flex place-content-center px-5 py-5">
         <section>
-          <div className="text-gray-700 text-3xl">{message}</div>
-          {
-            spotifyCurrentlyPlayingData?.songName && songJSX
-          }
+          <div className="text-gray-600 text-3xl font-bold">{message}</div>
+          <div className="text-gray-600">
+            {
+              spotifyCurrentlyPlayingData?.songName && songJSX
+            }
+          </div>
           
         </section>
       </div>

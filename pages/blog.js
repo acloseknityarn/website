@@ -1,7 +1,7 @@
+import ComingSoon from "../components/ComingSoon"
+
 export default function Blog() {
   return (
-    <div>
-      COMING SOON
-    </div>
+    <ComingSoon />
   )
 }
