@@ -12,6 +12,13 @@ const getCurrentlyPlayingSpotifyRequestHeaders = (token) => {
 };
 
 export default async function fetchSpotifyCurrentPlaying(req, res) {
+
+  // if (req.method !== 'GET') {
+  //   res.status(405).json({
+  //     message: 'method not allowed'
+  //   })
+  // }
+
   /** spotify access token */
   const tokenData = await getAccessToken();
   const token = tokenData.access_token
